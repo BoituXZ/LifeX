@@ -1,7 +1,30 @@
 # Health-Project
 
 ## Tech Stack
+### Frontend
 
+#### React.js
+#### Redux
+
+### Backend
+
+#### Node.js
+#### Express.js
+
+### Database
+
+#### Firebase Firestore
+
+### Authentication
+
+#### Firebase Authentication
+
+### Notifications
+
+#### FIrebase Cloud Messaging
+
+### Other
+  #### Postman, Heroku
 
 
 
