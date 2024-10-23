@@ -1,6 +1,6 @@
 # Health-Project
 
-<h2 style="color: blue;">## Tech Stack</h2>
+
 ### Frontend
 
 #### React.js
