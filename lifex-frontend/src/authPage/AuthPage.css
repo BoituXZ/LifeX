@@ -2,13 +2,21 @@
 
 *{
     font-family: "Alata", Helvetica;
+    --purple: #800080ff;
+    --white: #ffffffff;
+    --caribbean-current: #006c67ff;
+    --raw-umber: #8e6e53ff;
+    --tropical-indigo: #a682ffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
 }
 
 .navBar {
 display: flex;
 justify-content: space-between;
 /* Navbar */
-height: 50px;
+height: 60px;
 width: 100%;
 /* border: solid red 4px; */
 }
@@ -28,6 +36,7 @@ width: 100%;
 
 .navBar_logo span{
     color: #800080;
+    font-size: 30px;
 }
 
 .navBar_center{
@@ -43,14 +52,71 @@ width: 100%;
     
 }
 
+.authBody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* border: solid green 3px; */
+    height: 100%;
+}
+
+
 .textbox{
     width: 540px;
-    border: red 3px solid;
-    position: fixed;
-    top: 20%;
-    left: 10%;
+    /* border: red 3px solid; */
+    margin-top: 0%;
+    margin-left: 10%;
+    color: var(--white);
+    
+
 }
 
 .textbox span{
-    co
+    color: var(--purple);
+    font-size: 48px;
+}
+
+.textbox h1{
+    color: var(--purple);
+    font-size: 40px;
+    margin: 0;
+    font-weight: 100;
+}
+
+
+
+.authForm{
+    padding: 3%;
+    /* border: solid purple 3px; */
+    width: 540px;
+    height: 700px;
+}
+
+
+.isMember{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    color: var(--white);
+    border: none;
+    background: none;
+    margin-left: 2em;
+}
+
+.isMember:hover{
+    color: var(--purple);
+    cursor: pointer;
+    animation: smooth ease-in-out 1s;
+    margin-left: 2em;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--purple);
+    transform: all ease-in 0.5s;
 }

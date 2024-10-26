@@ -1,0 +1,66 @@
+.sForm{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 1em;
+    height: 44em;
+    width: 90%;
+    border-radius: 3px;
+    /* border: solid yellow 3px; */
+    background: rgb(128,0,128);
+background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 233, 0.814) 99%, rgba(128, 0, 128, 0.189) 100%);
+    transition: all 1s ease-in-out;
+}
+
+.sForm h1{
+    font-size: 40px;
+    color: var(--white);
+    text-align: center;
+    padding: 0em;
+}
+
+.sForm label{
+    font-size: 1.5em;
+    color: var(--white);
+    padding-left: 2em;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+
+.sForm input{
+    width: 22em;
+    height: 38px;
+    border: none;
+    color: var(--white);
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.2),
+        rgba(238, 170, 204, 30%)
+    );
+    margin-left: 3em;
+}
+
+.sForm button {
+    background: rgba(128, 0, 128, 1);
+    border: none;
+    height: 45px;
+    width: 19em; 
+    border-radius: 3px;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s, transsForm 0.1s;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+  
+.sForm button:active {
+    height: 40px;
+    width: 19em;    
+    background: rgba(75, 0, 130, 1); /* Darker shade when clicked */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transForm: translateY(2px); /* Slight movement to simulate pressing */
+  }
+  
