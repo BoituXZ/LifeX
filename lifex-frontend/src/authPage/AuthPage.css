@@ -43,4 +43,14 @@ width: 100%;
     
 }
 
+.textbox{
+    width: 540px;
+    border: red 3px solid;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+}
 
+.textbox span{
+    co
+}
