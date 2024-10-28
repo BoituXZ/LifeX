@@ -52,6 +52,7 @@ Form button {
     margin: auto;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s, transsForm 0.1s;
+    color: white;
   }
   
 Form button:active {
@@ -60,5 +61,6 @@ Form button:active {
     background: rgba(75, 0, 130, 1); /* Darker shade when clicked */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transForm: translateY(2px); /* Slight movement to simulate pressing */
+    color: white;
   }
   

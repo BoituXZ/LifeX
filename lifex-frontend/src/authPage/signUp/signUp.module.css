@@ -54,6 +54,7 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     transition: background-color 0.3s, box-shadow 0.3s, transsForm 0.1s;
     margin-top: 1em;
     margin-bottom: 2em;
+    color: white;
 }
   
 .sForm button:active {
@@ -62,5 +63,6 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     background: rgba(75, 0, 130, 1); /* Darker shade when clicked */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transForm: translateY(2px); /* Slight movement to simulate pressing */
+    color: white;
   }
   

@@ -9,7 +9,7 @@
     --tropical-indigo: #a682ffff;
     font-size: 14px;
     box-sizing: border-box;
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .navBar {
