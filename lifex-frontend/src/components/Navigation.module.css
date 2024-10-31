@@ -1,0 +1,54 @@
+/* the sidebar */
+
+aside{
+    flex: 1;
+    max-width: 15em;
+    /* border: solid 3px red; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    justify-content: center;
+    width: 8em;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
+}
+aside ul:hover{
+    width: 6em;
+    
+    
+}
+
+aside ul{
+    display: flex;
+    flex-direction: column;
+    gap: 9em;
+    padding: 0;
+    width: 4em; /* THis changes the width of the entire aside bar*/
+    text-align: center;
+}
+
+
+aside li{
+    list-style: none;
+    
+}
+
+.listIcons{
+    font-size: 30px;
+    color: black;
+
+}
+
+.listIcons:hover{
+    color: var(--purple);
+}
+
+
+
+aside h1{
+    font-size: 20px;
+    padding: 0.3em;
+    position: fixed;
+    top: 0;
+}
+/*  */

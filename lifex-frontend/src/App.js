@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AuthPage from './authPage/AuthPage';
-import Mission from './mission/Mission';
-import Home from './main/Home';
+import AuthPage from './webpages/authPage/AuthPage';
+import Mission from './webpages/mission/Mission';
+import Home from './webpages/main/Home';
 
 function App() {
   return (

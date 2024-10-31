@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    font-family: "Alata", Helvetica;
+    --purple: #800080ff;
+    --white: #ffffffff;
+    --caribbean-current: #006c67ff;
+    --raw-umber: #8e6e53ff;
+    --tropical-indigo: #a682ffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+/* Entire webpage */
+.mainContainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+    /* background-color: var(--white); */
+/*  */
+/* header */
+/* header of body */
+header{
+    border: solid  1px var(--caribbean-current);
+    flex: 3;
+    max-height: 6em;
+
+}
+
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.headerContainer h1{
+    flex: 1;
+    /* border: green 3px solid; */
+    max-width: 40%;
+    height: 100%;
+    margin: 0;
+}
+
+.headerContainer h1:nth-child(1){
+    font-size: 36px;
+    padding: 0.2em;
+}
+
+.headerContainer div{
+    flex: 1;
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+
+/* Body */
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+/*  main part of body */
+main{
+    /* border: solid 3px blue; */
+    position: relative;
+    /* Sizing of the main box */
+    flex: 4; 
+    /* flex for the children */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+main *{
+    /* border: solid brown 3px; */
+    padding: 0.4em;
+}
+
+.upperMain{
+    /* border: solid silver 5px; */
+    flex: 1;
+    max-height: 50%;
+
+    /* CHild styling */
+
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+}
+.upperMain div{
+    flex: 3;
+    border: solid 0.4px var(--caribbean-current);
+    
+}
+
+.lowerMain{
+    flex: 1;
+    max-height: 50%;
+
+    /* Child styling */
+
+    display: flex;
+    flex-direction: row ;
+    gap: 0.3em
+}
+
+.lowerMain div{
+    flex: 1;
+    
+    border: solid 0.3px var(--raw-umber);
+    
+}
