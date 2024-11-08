@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    font-family: "Alata", Helvetica;
+    --purple: #800080ff;
+    --white: #ffffffff;
+    --caribbean-current: #006c67ff;
+    --raw-umber: #8e6e53ff;
+    --tropical-indigo: #a682ffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+}
+
+.container {
+    display: flex;
+    position: fixed;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.Body {
+    flex: 1;
+    height: 100%;
+}
+
+/* Header of the body */
+.bodyHeader {
+    flex: 1;
+    height: 6em;
+    padding: 1em;
+    border-bottom: var(--purple) solid 2px;
+    box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.6);
+}
+
+.bodyHeader > h1 {
+    display: flex;
+    font-size: 1.3em;
+}
+
+/* Table stuff */
+.tableContainer {
+    flex: 1;
+    height: 75%;
+    padding: 1em;
+}
+
+.pillTable {
+    padding: 1em;
+    width: 100%;
+    max-height: 100%;
+    display: table;
+    border-spacing: 0em;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.pillTable thead {
+    box-shadow: 0 1px rgba(0, 0, 0, 0.6);
+}
+
+.pillTable thead tr {
+    text-align: left;
+    padding: 1em;
+}
+
+.pillTable th {
+    color: var(--tropical-indigo);
+    font-size: 1.5em;
+}
+
+.pillTable tbody {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.pillTable tbody * {
+    font-size: 0.95em;
+    font-weight: lighter;
+}
+
+/* Button below table */
+.buttonContainer {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    padding: 1.5em;
+}
+
+.addButton {
+    color: var(--tropical-indigo);
+    padding: 1em;
+    border: var(--tropical-indigo) solid 2px;
+    border-radius: 40px;
+    width: 8%;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.addButton:hover {
+    background-color: var(--tropical-indigo);
+    color: var(--white);
+}
+
+.addButton:active {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .bodyHeader > h1 {
+        font-size: 1.5em; /* Increase header font size for better visibility */
+    }
+
+    .pillTable th {
+        font-size: 1.2em; /* Slightly reduce table header size */
+    }
+
+    .pillTable tbody * {
+        font-size: 0.9em; /* Reduce body font size */
+    }
+
+    .addButton {
+        width: 40%; /* Increase button size for easier tapping */
+        font-size: 1em; /* Adjust button font size */
+    }
+
+    .buttonContainer {
+        justify-content: center; /* Center the button on smaller screens */
+        padding: 1em; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .bodyHeader {
+        height: 4em; /* Reduce header height */
+        padding: 0.5em; /* Reduce padding */
+    }
+
+    .pillTable th {
+        font-size: 1em; /* Further reduce header size */
+    }
+
+    .pillTable tbody * {
+        font-size: 0.85em; /* Further reduce body font size */
+    }
+
+    .addButton {
+        width: 70%; /* Make button wider on very small screens */
+        font-size: 0.9em; /* Adjust button font size */
+    }
+
+    .tableContainer {
+        padding: 0.5em; /* Reduce padding for the table container */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+
+    .pillTable {
+        font-size: 0.9em; /* Reduce font size for the entire table */
+    }
+
+    .pillTable th, .pillTable td {
+        padding: 0.5em; /* Reduce padding in table cells */
+    }
+}

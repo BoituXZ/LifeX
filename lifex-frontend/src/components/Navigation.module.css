@@ -1,54 +1,96 @@
 /* the sidebar */
 
-aside{
+aside {
     flex: 1;
-    max-width: 15em;
+    max-width: 6em;
     /* border: solid 3px red; */
     height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 10em;
     justify-content: center;
-    width: 8em;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.8);
-}
-aside ul:hover{
     width: 6em;
-    
-    
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8);
+    border-right: 2px solid var(--tropical-indigo);
 }
 
-aside ul{
+@media screen and (max-width: 768px) {
+    aside {
+        max-width: 100%;
+        width: 100%;
+        height: 4em;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        border-right: none;
+        border-top: 2px solid var(--tropical-indigo);
+    }
+
+    aside ul {
+        flex-direction: row;
+        width: 100%;
+        gap: 2em;
+        margin: 0;
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    aside {
+        height: 3em;
+    }
+
+    aside ul {
+        gap: 1em;
+        padding: 0 0.5em;
+    }
+
+    .listElement *:hover {
+        font-size: 1.5em;
+    }
+
+    .listIcons {
+        font-size: 25px;
+    }
+
+    aside span {
+        font-size: 20px;
+        padding: 0.5em;
+    }
+}
+
+aside ul {
     display: flex;
     flex-direction: column;
     gap: 9em;
     padding: 0;
-    width: 4em; /* THis changes the width of the entire aside bar*/
+    width: 4em;
     text-align: center;
+    flex: 2;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
-
-aside li{
+aside li {
     list-style: none;
-    
 }
 
-.listIcons{
+.listElement *:hover {
+    color: var(--tropical-indigo);
+    font-size: 1.7em;
+}
+
+.listIcons {
     font-size: 30px;
-    color: black;
-
 }
 
-.listIcons:hover{
+.listIcons:active {
     color: var(--purple);
 }
 
-
-
-aside h1{
-    font-size: 20px;
-    padding: 0.3em;
-    position: fixed;
-    top: 0;
+aside span {
+    font-size: 23px;
+    margin: auto;
+    padding: 0.8em;
+    color: var(--purple);
 }
-/*  */
