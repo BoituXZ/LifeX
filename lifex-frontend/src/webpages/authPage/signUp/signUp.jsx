@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+import { Link } from 'react-router-dom';
 import styles from './signUp.module.css'; // Ensure this file exists and is correctly named
 
 const SignUpForm = () => {
@@ -34,8 +35,8 @@ const SignUpForm = () => {
       
       <label htmlFor="confirmPassword">Re-enter Password</label>
       <input id="confirmPassword" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+      <Link to='./Home'><button className={styles.button} type="submit">Sign Up</button></Link>
       
-      <button className={styles.button} type="submit">Sign Up</button>
     </form>
   );
 };

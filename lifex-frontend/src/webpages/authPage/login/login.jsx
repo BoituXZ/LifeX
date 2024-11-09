@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './login.css';
+import { Link } from 'react-router-dom';
+import styles from'./login.css';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form className={styles.form} onSubmit={handleLogin}>
       <h1>Welcome</h1>
       <label htmlFor="email">Email
         <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
@@ -19,7 +20,8 @@ const LoginForm = () => {
       <label htmlFor="password">Password
         <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
       </label>
-      <button type="submit">Log in</button>
+      <Link to='./Home'><button type="submit">Log in</button></Link>
+      {/* FIx how it looks */}
     </form>
   );
 };
