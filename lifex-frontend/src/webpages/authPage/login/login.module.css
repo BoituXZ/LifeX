@@ -1,4 +1,4 @@
-.form{
+.loginForm{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -12,14 +12,14 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     transition: all 1s ease-in-out;
 }
 
-.form h1{
+.loginForm h1{
     font-size: 40px;
     color: var(--white);
     text-align: center;
     padding: 0em;
 }
 
-.form label{
+.loginForm label{
     font-size: 1.5em;
     color: var(--white);
     padding-left: 2em;
@@ -30,7 +30,7 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     
 }
 
-.form input{
+.loginForm input{
     width: 22em;
     height: 38px;
     border: none;
@@ -43,7 +43,7 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     
 }
 
-.Form button {
+.loginForm button {
     background: rgba(128, 0, 128, 1);
     border: none;
     height: 40px;
@@ -55,7 +55,7 @@ background: linear-gradient(350deg, rgba(128, 0, 128, 0.49) 0%, rgba(148, 188, 2
     color: white;
   }
   
-.Form button:active {
+.loginForm button:active {
     height: 40px;
     width: 19em;    
     background: rgba(75, 0, 130, 1); /* Darker shade when clicked */

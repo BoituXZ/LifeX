@@ -1,41 +1,46 @@
 import React, { useState} from 'react';
-import { Link } from 'react-router-dom';
+
 import styles from './signUp.module.css'; // Ensure this file exists and is correctly named
+import { useNavigate } from 'react-router-dom';
 
 const SignUpForm = () => {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate()
 
-  const handleSignUp = (e) => {
+
+  const [inputs, setInputs] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    
+  });
+
+
+  const handleAuth = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-    alert("Sign-up successful!");
+    console.log("inputs", inputs)
+    
   };
 
   return (
-    <form className={styles.sForm} onSubmit={handleSignUp}>
+    <form className={styles.sForm} onSubmit={handleAuth}>
       <h1>Welcome</h1>
       <label htmlFor="name">Name</label>
-      <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+      <input id="name" type="text" value={inputs.name} onChange={(e) => setInputs({...inputs,name:e.target.value})} required />
       
       <label htmlFor="surname">Surname</label>
-      <input id="surname" type="text" value={surname} onChange={(e) => setSurname(e.target.value)} required />
+      <input id="surname" type="text" value={inputs.surname} onChange={(e) => setInputs({...inputs,surname:e.target.value})} required />
       
       <label htmlFor="email">Email</label>
-      <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <input id="email" type="email" value={inputs.email} onChange={(e) => setInputs({...inputs,email:e.target.value})} required />
       
       <label htmlFor="password">Password</label>
-      <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      <input id="password" type="password" value={inputs.password} onChange={(e) => setInputs({...inputs,password:e.target.value})} required />
       
       <label htmlFor="confirmPassword">Re-enter Password</label>
-      <input id="confirmPassword" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-      <Link to='./Home'><button className={styles.button} type="submit">Sign Up</button></Link>
+      <input id="confirmPassword" type="password" value={inputs.confirmPassword} onChange={(e) => setInputs({...inputs,confirmPassword:e.target.value})} required />
+      <button className={styles.button} type="submit" onClick={handleAuth}>Sign Up</button>\
       
     </form>
   );

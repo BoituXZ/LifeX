@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from'./login.css';
+
+import styles from'./login.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
+  const navigate = useNavigate()
+
+  const [inputs, setInputs] = useState({
+    email: '',
+    password: '',
+  })
+
+
+  const handleLogin = () => {
+    if (!inputs.email || !inputs.password) {
+      alert("One of the fields is missing!")
+      return
+    } else {
+      navigate("/Home")
+
+    }
+  } 
 
   return (
-    <form className={styles.form} onSubmit={handleLogin}>
+    <form className={styles.loginForm} onSubmit={handleLogin}>
       <h1>Welcome</h1>
       <label htmlFor="email">Email
-        <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+        <input id="email" type="email" value={inputs.email} onChange={(e) => setInputs({...inputs,email:e.target.value})} required/>
       </label>
       <label htmlFor="password">Password
-        <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+        <input id="password" type="password" value={inputs.password} onChange={(e) => setInputs({...inputs,password:e.target.value})} required/>
       </label>
-      <Link to='./Home'><button type="submit">Log in</button></Link>
+      <button type="submit" onClick={handleLogin}>Log in</button>
       {/* FIx how it looks */}
     </form>
   );
