@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import styles from './AuthPage.module.css'
 import LoginForm from './login/login'
 import SignUpForm from './signUp/signUp';
-
+// import { auth } from 'firebase';
+// import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 
 

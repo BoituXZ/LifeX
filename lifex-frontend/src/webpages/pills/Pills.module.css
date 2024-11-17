@@ -26,7 +26,7 @@
 
 .Body {
     
-    
+    padding: 0.1em;
     flex: 1;
     height: 100%;
 }
@@ -177,60 +177,37 @@
     color: black;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .bodyHeader > h1 {
-        font-size: 1.5em; /* Increase header font size for better visibility */
-    }
 
-    .pillTable th {
-        font-size: 1.2em; /* Slightly reduce table header size */
-    }
-
-    .pillTable tbody * {
-        font-size: 0.9em; /* Reduce body font size */
-    }
-
-    .addButton {
-        width: 40%; /* Increase button size for easier tapping */
-        font-size: 1em; /* Adjust button font size */
-    }
-
-    .buttonContainer {
-        justify-content: center; /* Center the button on smaller screens */
-        padding: 1em; /* Reduce padding */
-    }
+.rightSidecontainer{
+    flex: 1;
+    max-width: 22em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.1em;
+    border: solid red 3px;
+    gap: 0.5em;
 }
 
-@media (max-width: 480px) {
-    .bodyHeader {
-        height: 4em; /* Reduce header height */
-        padding: 0.5em; /* Reduce padding */
-    }
 
-    .pillTable th {
-        font-size: 1em; /* Further reduce header size */
-    }
+.profileContainer{
+    border: solid 2px orange;
+    flex: 1;
+    max-height: 8em;
+}
 
-    .pillTable tbody * {
-        font-size: 0.85em; /* Further reduce body font size */
-    }
 
-    .addButton {
-        width: 70%; /* Make button wider on very small screens */
-        font-size: 0.9em; /* Adjust button font size */
-    }
+.middle{
+    border: solid 3px green;
+    flex: 4;
+    height: 30em;
+    max-height: 30em;
+    padding: 1em;
+    background-color: var(--special-white);
+}
 
-    .tableContainer {
-        padding: 0.5em; /* Reduce padding for the table container */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
-    }
+.lower{
+    flex: 2;
 
-    .pillTable {
-        font-size: 0.9em; /* Reduce font size for the entire table */
-    }
-
-    .pillTable th, .pillTable td {
-        padding: 0.5em; /* Reduce padding in table cells */
-    }
+    background-color: var(--special-white);
+    padding: 1em;
 }

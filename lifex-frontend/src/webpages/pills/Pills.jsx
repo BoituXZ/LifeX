@@ -55,7 +55,7 @@ const Pills = () => {
         <Navigation />
         <div className={styles.Body}>
           <div className={styles.bodyHeader}>
-            <h1>Your Pills</h1>
+            <h1>Pills Dashboard</h1>
           </div>
           <div className={styles.tableContainer}>
             <table className={styles.pillTable}>
@@ -116,6 +116,21 @@ const Pills = () => {
             <button className={styles.addButton} onClick={toggleForm}>Add</button>
           </div>
           
+        </div>
+        <div className={styles.rightSidecontainer}>
+          <div className={styles.profileContainer}>
+            <h1>Hi Boitumelo</h1>
+            <img alt="ProfilePicture"/>
+          </div>
+          <div className={styles.middle}>
+            <h1>Pill Streak</h1>
+            <p>You have gone 12 days without missing your meds!</p>
+            
+          </div>
+          <div className={styles.lower}>
+            <h1>Upcoming Refills</h1>
+            <p>You will need to refill Ibuprofen in 3 days</p>
+          </div>
         </div>
       </div>
     </>
