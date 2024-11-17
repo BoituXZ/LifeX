@@ -193,7 +193,28 @@
     border: solid 2px orange;
     flex: 1;
     max-height: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--special-white);
+    border: solid 1px var(--tropical-indigo);
+    
 }
+
+.profileContainer h1{
+    flex: 1;
+    padding: 1em;
+    font-size: large;
+}
+
+.profileContainer img{
+    flex: 4;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 1em;
+    border-radius: 60%;
+}
+
 
 
 .middle{
