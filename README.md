@@ -1,3 +1,6 @@
+LifeX © 2024 by Boitumelo Ngwenya is licensed under Creative Commons Attribution-NonCommercial 4.0 International 
+
+
 # Health-Project
 
 
