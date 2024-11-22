@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
-*{
+:root{
     font-family: "Alata", Helvetica;
     --purple: #800080ff;
     --white: #ffffffff;

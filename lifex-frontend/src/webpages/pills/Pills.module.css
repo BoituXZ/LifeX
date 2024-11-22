@@ -1,2 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
 
+@layer base{
+:root{
+    --purple: #800080ff;
+    --white: rgba(166, 166, 166, 0);
+    --caribbean-current: #006c67ff;
+    --raw-umber: #8e6e53ff;
+    --tropical-indigo: #a682ffff;
+
+
+    /* Fonts */
+
+    --heading: "Alata", sans-serif;
+    --text: "Red Hat Text", sans-serif;
+    --fancy: "EB Garamond", serif;
+
+    /* Typeface */
+
+    --base-size: 1rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--base-size);
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+section{
+    display: block;
+    border: solid 2px red;
+}
+
+}
+
+@layer pageContainer{
+
+
+.pageContainer{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-image: url("../../../public/assets/images/background4.jpg");
+    background-size: cover; 
+    background-position: 40% 80%;
+}
+
+.nav{
+    flex: 1;
+    max-width: 80px;
+}
+.centreSection{
+    flex: 3 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSection{
+    flex: 1;
+}
+}
+
+@layer centreSection{
+
+.centreSection h1{
+    border: solid green 2px;
+    margin: 0;
+    flex: 1;
+    max-height: 80px;
+    font-size: 2rem;
+    padding-left: 0.2em;
+    padding-top: 0.8em;
+}
+
+.pillsBody{
+    flex: 4;
+    border: solid orange 2px;
+    padding: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+
+}
+
+
+@layer centreSectionCards{
+.card{
+    border: solid 1px var(--tropical-indigo);
+    width: 320px;
+    max-height: 230px;
+    /* height: 230px; */
+    border-radius: 8px;
+    padding: 0.2rem;
+    display: block;
+    font-family: var(--text);
+    background-color:   rgba(255, 255, 255, 0.651);
+}
+
+.card h3{
+    margin: 0.6rem 0;
+
+}
+
+.cardHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--tropical-indigo);
+    margin: 0;
+    padding: 0 0.1rem;
+}
+
+
+
+.cardBottom{
+    /* border: solid greenyellow 1px; */
+    display: flex;
+    flex-direction: row;
+    max-height: 170px;
+    white-space: nowrap;
+    font-weight: 450;
+
+}
+
+.cardBottomLeft{
+    flex: 4;
+    /* border: solid 2px rgb(151, 151, 243); */
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.cardBottomLeft *{
+    margin: 0;
+}
+
+.cardBottomRight{
+    /* border: purple 1px solid; */
+    flex: 1;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    gap: 0.3em;
+    margin: 0;
+}
+
+
+
+
+.cardButton{
+    background-color: var(--tropical-indigo);
+    color: white;
+    width: 80px;
+    height: 22px;
+    border-radius: 8px;
+    padding: 0.1rem;
+    border: 2px solid transparent;
+    
+}
+
+.cardButton:hover{
+    font-weight: bolder;
+    animation: smooth ease-in-out 1s ;
+}
+
+.cardButton:active{
+    background-color: var(--purple);
+}
+
+}
