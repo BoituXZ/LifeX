@@ -77,7 +77,7 @@ aside li {
 }
 
 .listElement *:hover {
-    color: var(--tropical-indigo);
+    fill: var(--tropical-indigo);
     font-size: 1.7em;
 }
 
