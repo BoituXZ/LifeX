@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+@layer base{
+:root{
+    --purple: #800080ff;
+    --white: rgba(166, 166, 166, 0);
+    --caribbean-current: #006c67ff;
+    --raw-umber: #8e6e53ff;
+    --tropical-indigo: #a682ffff;
+    --tropical-indigo-trans: rgba(165, 130, 255, 0.623);
+    --special-white: #ffffffab;
+
+
+    /* Fonts */
+
+    --heading: "Alata", sans-serif;
+    --text: "Red Hat Text", sans-serif;
+    --fancy: "EB Garamond", serif;
+
+    /* Typeface */
+
+    --base-size: 1rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
+}
+}
+
+@layer page{
+
+
+.dietPage{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.navSection{
+    flex: 1;
+    border: solid red 1px;
+    max-width: 80px;
+    height: 100%;
+}
+
+.mainSection{
+    flex: 4;
+    border: solid yellow 1px;
+}
+}

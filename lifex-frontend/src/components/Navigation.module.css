@@ -74,6 +74,7 @@ aside ul {
 
 aside li {
     list-style: none;
+    fill: black;
 }
 
 .listElement *:hover {
@@ -94,4 +95,9 @@ aside span {
     margin: auto;
     padding: 0.8em;
     color: var(--purple);
+}
+
+.icons{
+    fill: black;
+    font-size: 400;
 }

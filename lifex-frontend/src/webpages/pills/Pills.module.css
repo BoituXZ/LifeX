@@ -7,6 +7,8 @@
     --caribbean-current: #006c67ff;
     --raw-umber: #8e6e53ff;
     --tropical-indigo: #a682ffff;
+    --tropical-indigo-trans: rgba(165, 130, 255, 0.623);
+    --special-white: #ffffffab;
 
 
     /* Fonts */
@@ -29,6 +31,10 @@
 
 *{
     box-sizing: border-box;
+    user-select: none;
+
+    
+    
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -41,10 +47,12 @@ body{
 
 section{
     display: block;
-    border: solid 2px red;
+    /* border: solid 2px red; */
 }
 
 }
+
+
 
 @layer pageContainer{
 
@@ -56,7 +64,8 @@ section{
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-image: url("../../../public/assets/images/background4.jpg");
+    background-color: var(--white);
+    background-image: url("../../../public/assets/images/AuthPage_bg.jpg");
     background-size: cover; 
     background-position: 40% 80%;
 }
@@ -70,6 +79,7 @@ section{
 
     display: flex;
     flex-direction: column;
+    
 }
 
 .rightSection{
@@ -80,115 +90,366 @@ section{
 @layer centreSection{
 
 .centreSection h1{
-    border: solid green 2px;
+    /* border: solid green 2px; */
     margin: 0;
     flex: 1;
     max-height: 80px;
     font-size: 2rem;
     padding-left: 0.2em;
     padding-top: 0.8em;
+    background-color: var(--tropical-indigo-trans);
+    border-radius: 2px;
+    box-shadow: 0 0 5px var(--tropical-indigo), 0 0 5px black;
 }
 
 .pillsBody{
     flex: 4;
-    border: solid orange 2px;
+    /* border: solid orange 2px; */
     padding: 1rem;
     display: flex;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    overflow: scroll;
+    flex-direction: column;
+    
+}
+.pillsBodyCards{
+    flex:3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 0 11px;
+    overflow-y:auto;
+    overflow-x: none;
+    padding: 1rem;
+    /* border: solid green 3px; */
 }
 
-
+.pillsBodyButton{
+    flex: 1;
+    /* border: solid red 3px; */
 }
 
 
 @layer centreSectionCards{
-.card{
-    border: solid 1px var(--tropical-indigo);
-    width: 320px;
-    max-height: 230px;
-    /* height: 230px; */
+    .card{
+        display: block;
+        border: solid 1px var(--tropical-indigo);
+        max-width: 370px;
+        max-height: 230px;
+        /* height: 230px; */
+        border-radius: 8px;
+        padding: 0.2rem;
+        display: block;
+        box-shadow: 0 0 5px var(--tropical-indigo), 0 0 5px black;
+        
+        font-family: var(--text);
+        background-color:   rgba(255, 255, 255, 0.651);
+        margin: 0;
+    }
+    .card:hover{
+        box-shadow: 0 0 5px var(--tropical-indigo), 0 0 5px var(--tropical-indigo-trans);
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .card h3{
+        margin: 0.6rem 0;
+    
+    }
+    
+    .cardHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--tropical-indigo);
+        margin: 0;
+        padding: 0 0.1rem;
+    }
+    
+    
+    
+    .cardBottom{
+        /* border: solid greenyellow 1px; */
+        display: flex;
+        flex-direction: row;
+        max-height: 170px;
+        white-space: nowrap;
+        font-weight: 450;
+    
+    }
+    
+    .cardBottomLeft{
+        flex: 4;
+        /* border: solid 2px rgb(151, 151, 243); */
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    
+    }
+    
+    .cardBottomLeft *{
+        margin: 0;
+    }
+    
+    .cardBottomRight{
+        /* border: purple 1px solid; */
+        flex: 1;
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 0.2em;
+        margin: 0;
+    }
+    
+    
+    
+    
+    .cardButton{
+        background-color: var(--tropical-indigo);
+        color: white;
+        width: 80px;
+        height: 22px;
+        border-radius: 8px;
+        padding: 0.1rem;
+        border: 2px solid transparent;
+        
+        
+        
+    }
+    
+    .cardButton:hover{
+        color: black;
+        width: 82px;
+        height: 23px;
+        
+        transition: all  0.2s ease-in-out;
+        box-shadow: 0 0 1px var(--tropical-indigo), 0 0 1px var(--tropical-indigo);
+        
+    }
+    
+    .cardButton:active{
+        background-color: var(--purple);
+    }
+    
+    }
+
+@layer centreButton{
+.pillButton{
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: var(--tropical-indigo);
+    border-color: rgb(255, 255, 255);
+    font-family: var(--fancy);
+    text-transform: uppercase;
+}
+
+.pillButton:hover{
+
+}
+}
+}
+
+
+
+@layer rightSection{
+.rightSection{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0 0.2rem;
+    border-left: solid 2px var(--tropical-indigo);
+}
+/* profile stuff */
+
+
+
+.profileContainer{
+    flex: 1;
+    background-color: var(--tropical-indigo-trans);
     border-radius: 8px;
-    padding: 0.2rem;
-    display: block;
-    font-family: var(--text);
-    background-color:   rgba(255, 255, 255, 0.651);
-}
-
-.card h3{
-    margin: 0.6rem 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    
 
 }
-
-.cardHeader{
+.profileTitle{
+    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid var(--tropical-indigo);
+    margin: 0.3rem 1rem;
+}
+
+.profileTitle h3{
     margin: 0;
-    padding: 0 0.1rem;
+}
+
+.profileInfo{
+    flex: 3;
+    padding: 0 1rem;
+    margin: 0;
+    background-color: var(--special-white);
+}
+.profileInfo h5{
+    margin: 0.4rem 0;
+}
+
+/* Streak */
+.streakContainer{
+    flex: 2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tropical-indigo-trans);
+
+    
+}
+.streakTally{
+    margin: 0 0.2rem;
+    max-height: 45px;
+    flex: 1;
+}
+.streakCalender{
+    flex: 3;
+    background-color: black;
+    width: 100%;
+    height: 180px;
+}
+/* refills */
+.refillContainer{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: var(--tropical-indigo-trans);
+    border-radius: 4px;
+    
 }
 
 
 
-.cardBottom{
-    /* border: solid greenyellow 1px; */
+.refillTop{
+    flex: 1;
+    max-height: 40px;
+}
+
+.refillTop{
+    margin: 0 0.1rem;
+}
+.refillBottom{
+    flex: 4;
+    background-color: var(--special-white);
+    /* height: 100%; */
+}
+
+.refill{
     display: flex;
     flex-direction: row;
-    max-height: 170px;
-    white-space: nowrap;
-    font-weight: 450;
-
+    justify-content: space-between;
+    padding: 1rem 0.3rem;
+    background-color: var(-);
+    /* border: turquoise 2px solid; */
 }
-
-.cardBottomLeft{
-    flex: 4;
-    /* border: solid 2px rgb(151, 151, 243); */
-    padding: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-.cardBottomLeft *{
+.refill h4{
+    display: inline-block;
     margin: 0;
 }
-
-.cardBottomRight{
-    /* border: purple 1px solid; */
-    flex: 1;
-    padding: 0.2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    gap: 0.3em;
+.refill p{
+    display: inline-block;
     margin: 0;
 }
+}
 
 
 
+@layer form{
 
-.cardButton{
-    background-color: var(--tropical-indigo);
-    color: white;
-    width: 80px;
-    height: 22px;
-    border-radius: 8px;
-    padding: 0.1rem;
-    border: 2px solid transparent;
+    .formContainer{
+        
+        margin: 0 auto;
+        box-sizing: border-box;
+        /* border: solid 2px red; */
+        width: 500px;
+        height: 550px;
+        
+
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
     
-}
+    .formDiv{
+        /* border: solid white 1px; */
+        height: 100%;
+        padding: 0.5rem;
+        
+    }
+    
+    .form{
+        
 
-.cardButton:hover{
-    font-weight: bolder;
-    animation: smooth ease-in-out 1s ;
-}
+        
 
-.cardButton:active{
-    background-color: var(--purple);
-}
 
+
+
+
+
+
+
+        box-sizing: border-box;
+        line-height: 1.5;
+        font-family: var(--heading);
+        border: 1px solid var(--violet);
+        box-shadow: 0 0 10px var(--tropical-indigo), 0 0 30px var(--tropical-indigo);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        user-select: none;
+        
+        background-color: var(--tropical-indigo-trans);
+        padding-top: 0.5rem;
+    
+        
+        
+    }
+    
+    .form label{
+        margin: 0 0.8rem;
+        font-weight: bold;
+    }
+    
+    .form input{
+        height:30px;
+        width: 90%;
+        margin: 0.1rem 1rem;
+        padding: 0 0.4rem;
+        border: 1px solid white;
+        border-radius: 1px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+        
+        color: var(--tropical-indigo);
+    
+    }
+    
+    
+    .form input:focus{
+        border-color: var(--tropical-indigo);
+        /* box-shadow: 0 0 10px rgba(102, 175, 233, 0.6); */
+        box-shadow: 0 0 10px var(--tropical-indigo);
+        color: var(--tropical-indigo);
+        
+    }
+    .form input::placeholder{
+        color: var(--tropical-indigo);
+    }
 }

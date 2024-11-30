@@ -4,6 +4,7 @@ import AuthPage from './webpages/authPage/AuthPage';
 import Mission from './webpages/mission/Mission';
 import Home from './webpages/main/Home';
 import Pills from './webpages/pills/Pills';
+import Diet from './webpages/diet/Diet'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/Mission" element={<Mission />} />
         <Route path="/Home" element={<Home />} />
         <Route path='/Pills' element={<Pills/>}/>
+        <Route path='/diet' element={<Diet/>}/>
       </Routes>
     </Router>
   );

@@ -12,26 +12,26 @@ const Navigation = () => {
         <aside className={styles.aside}>
           <span>LifeX</span>
           <ul>
-            <li className={styles.listElement}>
+            <li>
               
               <Link to='../pills'>
-                <GiMedicines  className={styles.listIcons}/>
+                <GiMedicines  className={styles.icons}/>
                 </Link>
               </li>
-            <li className={styles.listElement}>
-              <Link to='/home'>
-                <IoFastFoodOutline className={styles.listIcons}/>
+            <li>
+              <Link to='../diet'>
+                <IoFastFoodOutline className={styles.icons}/>
               </Link>
               </li>
-            <li className={styles.listElement}>
+            <li>
               
               <Link to='/Reminders'>
-                <LuClock11 className={styles.listIcons}/>
+                <LuClock11 className={styles.icons}/>
               </Link>
               </li>
-            <li className={styles.listElement}>
+            <li>
               <Link to='/Notifications'>
-              <AiOutlineBell className={styles.listIcons}/>
+              <AiOutlineBell className={styles.icons}/>
               </Link>
               </li>
           </ul>
