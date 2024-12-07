@@ -4,7 +4,30 @@ import Navigation from '../../components/Navigation';
 
 const Home = () => {
 
-  
+  const UpperMain = () =>{
+    return(
+      <>
+        <div className={styles.upperMain}>
+            <div className={styles.meds}><h3>Upcoming Medications</h3></div>
+            <div><h3>Upcoming Meals</h3></div>
+            <div><h3>Current Health</h3></div>
+
+          </div>
+      </>
+    )
+  }
+
+  const LowerMain = () =>{
+    return(
+      <>
+        <div className={styles.lowerMain}>
+            <div>Diet & Meds Streak</div>
+            <div>Notifications</div>
+          </div>
+      </>
+    )
+  }
+
   return (
     <>
     <div className={styles.mainContainer}>
@@ -18,15 +41,8 @@ const Home = () => {
           </div>
         </header>
         <main className={styles.main}>
-          <div className={styles.upperMain}>
-            <div>Upcoming Medications</div>
-            <div>Upcoming Meals</div>
-            <div>Current Health</div>
-          </div>
-          <div className={styles.lowerMain}>
-            <div>Diet & Meds Streak</div>
-            <div>Notifications</div>
-          </div>
+          <UpperMain/>
+          <LowerMain/>
         </main>
       </div>
     </div>
